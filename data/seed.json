@@ -2,7 +2,9 @@
   "store": {
     "currencies": [
       "eur",
-      "usd"
+      "usd",
+      "ghs",
+      "cny"
     ]
   },
   "users": [
@@ -34,8 +36,46 @@
       ]
     },
     {
-      "id": "test-region-na",
-      "name": "NA",
+      "id": "test-region-africa",
+      "name": "Africa",
+      "currency_code": "ghs",
+      "tax_rate": 0,
+      "payment_providers": [
+        "manual"
+      ],
+      "fulfillment_providers": [
+        "manual"
+      ],
+      "countries": [
+        "gh",
+        "za",
+        "ng",
+        "eg",
+        "ci",
+        "et"
+      ]
+    },
+    {
+      "id": "test-region-asia",
+      "name": "Asia",
+      "currency_code": "cny",
+      "tax_rate": 0,
+      "payment_providers": [
+        "manual"
+      ],
+      "fulfillment_providers": [
+        "manual"
+      ],
+      "countries": [
+        "cn",
+        "jp",
+        "in",
+        "th"
+      ]
+    },
+    {
+      "id": "test-region-america",
+      "name": "America",
       "currency_code": "usd",
       "tax_rate": 0,
       "payment_providers": [
@@ -62,6 +102,26 @@
       "amount": 1000
     },
     {
+      "name": "Alibaba Standard",
+      "region_id": "test-region-asia",
+      "provider_id": "manual",
+      "data": {
+        "id": "manual-fulfillment"
+      },
+      "price_type": "flat_rate",
+      "amount": 1000
+    },
+    {
+      "name": "Africa Post Standard",
+      "region_id": "test-region-africa",
+      "provider_id": "manual",
+      "data": {
+        "id": "manual-fulfillment"
+      },
+      "price_type": "flat_rate",
+      "amount": 1000
+    },
+    {
       "name": "PostFake Express",
       "region_id": "test-region-eu",
       "provider_id": "manual",
@@ -72,8 +132,50 @@
       "amount": 1500
     },
     {
+      "name": "Africa Post Express",
+      "region_id": "test-region-asia",
+      "provider_id": "manual",
+      "data": {
+        "id": "manual-fulfillment"
+      },
+      "price_type": "flat_rate",
+      "amount": 1500
+    },
+    {
+      "name": "Alibaba Express",
+      "region_id": "test-region-africa",
+      "provider_id": "manual",
+      "data": {
+        "id": "manual-fulfillment"
+      },
+      "price_type": "flat_rate",
+      "amount": 1500
+    },
+    {
       "name": "PostFake Return",
       "region_id": "test-region-eu",
+      "provider_id": "manual",
+      "data": {
+        "id": "manual-fulfillment"
+      },
+      "price_type": "flat_rate",
+      "is_return": true,
+      "amount": 1000
+    },
+    {
+      "name": "Alibaba Return",
+      "region_id": "test-region-asia",
+      "provider_id": "manual",
+      "data": {
+        "id": "manual-fulfillment"
+      },
+      "price_type": "flat_rate",
+      "is_return": true,
+      "amount": 1000
+    },
+    {
+      "name": "Africa Post Return",
+      "region_id": "test-region-africa",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -95,7 +197,7 @@
     },
     {
       "name": "FakeEx Standard",
-      "region_id": "test-region-na",
+      "region_id": "test-region-america",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -105,7 +207,7 @@
     },
     {
       "name": "FakeEx Express",
-      "region_id": "test-region-na",
+      "region_id": "test-region-america",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -115,7 +217,7 @@
     },
     {
       "name": "FakeEx Return",
-      "region_id": "test-region-na",
+      "region_id": "test-region-america",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -126,7 +228,7 @@
     },
     {
       "name": "I want to return it myself",
-      "region_id": "test-region-na",
+      "region_id": "test-region-america",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -695,9 +797,6 @@
       "categories": [
         {
           "id": "pcat_merch"
-        },
-        {
-          "id": "pcat_hidden_featured"
         }
       ],
       "subtitle": null,
@@ -808,9 +907,6 @@
       "categories": [
         {
           "id": "pcat_shirts"
-        },
-        {
-          "id": "pcat_hidden_featured"
         }
       ],
       "subtitle": null,
@@ -921,9 +1017,6 @@
       "categories": [
         {
           "id": "pcat_merch"
-        },
-        {
-          "id": "pcat_hidden_featured"
         }
       ],
       "subtitle": null,
@@ -987,20 +1080,6 @@
       "rank": 0,
       "category_children": [],
       "handle": "merch"
-    },
-    {
-      "id": "pcat_hidden_carousel",
-      "name": "Hidden homepage carousel",
-      "rank": 0,
-      "category_children": [],
-      "handle": "hidden-homepage-carousel"
-    },
-    {
-      "id": "pcat_hidden_featured",
-      "name": "Hidden homepage featured",
-      "rank": 0,
-      "category_children": [],
-      "handle": "hidden-homepage-featured-items"
     }
   ]
 }
