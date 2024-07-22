@@ -133,7 +133,7 @@
     },
     {
       "name": "Africa Post Express",
-      "region_id": "test-region-asia",
+      "region_id": "test-region-africa",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -143,7 +143,7 @@
     },
     {
       "name": "Alibaba Express",
-      "region_id": "test-region-africa",
+      "region_id": "test-region-asia",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
@@ -187,6 +187,28 @@
     {
       "name": "I want to return it myself",
       "region_id": "test-region-eu",
+      "provider_id": "manual",
+      "data": {
+        "id": "manual-fulfillment"
+      },
+      "price_type": "flat_rate",
+      "is_return": true,
+      "amount": 0
+    },
+    {
+      "name": "I want to return it myself",
+      "region_id": "test-region-asia",
+      "provider_id": "manual",
+      "data": {
+        "id": "manual-fulfillment"
+      },
+      "price_type": "flat_rate",
+      "is_return": true,
+      "amount": 0
+    },
+    {
+      "name": "I want to return it myself",
+      "region_id": "test-region-africa",
       "provider_id": "manual",
       "data": {
         "id": "manual-fulfillment"
